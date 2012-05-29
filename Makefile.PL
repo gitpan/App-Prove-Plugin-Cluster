@@ -11,7 +11,10 @@ use ExtUtils::MakeMaker 6.31;
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'Supports distribution of tests across a cluster, such as LSF',
   'AUTHOR' => 'Various employees of the Washington University Genome Institute',
-  'BUILD_REQUIRES' => {},
+  'BUILD_REQUIRES' => {
+    'Test::Most' => '0.21',
+    'Try::Tiny' => '0.09'
+  },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
   },
@@ -19,8 +22,10 @@ my %WriteMakefileArgs = (
   'EXE_FILES' => [],
   'LICENSE' => 'perl',
   'NAME' => 'App::Prove::Plugin::Cluster',
-  'PREREQ_PM' => {},
-  'VERSION' => '0.01',
+  'PREREQ_PM' => {
+    'Test::Harness' => '3.23'
+  },
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t t/fake_t/*.t'
   }

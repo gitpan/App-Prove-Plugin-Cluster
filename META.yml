@@ -1,21 +1,19 @@
---- #YAML:1.0
-name:               App-Prove-Plugin-Cluster
-version:            0.01
-abstract:           Supports distribution of tests across a cluster, such as LSF
+---
+abstract: 'Supports distribution of tests across a cluster, such as LSF'
 author:
-    - Various employees of the Washington University Genome Institute
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  6.31
+  - 'Various employees of the Washington University Genome Institute'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:  {}
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.52
+  Test::Most: 0.21
+  Try::Tiny: 0.09
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.101900, CPAN::Meta::Converter version 2.101670'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: App-Prove-Plugin-Cluster
+requires:
+  Test::Harness: 3.23
+version: 0.02
